@@ -1,20 +1,35 @@
 package vn.its.gsmessagingstompwebsocket.model;
 
 public class HelloMessage {
-    private String name;
+    private HelloType type;
+    private String content;
+    private String sender;
 
-    public HelloMessage() {
+    public enum HelloType {
+        CHAT, JOIN, LEAVE
     }
 
-    public HelloMessage(String name) {
-        this.name = name;
+    public HelloType getType() {
+        return type;
     }
 
-    public String getName() {
-        return name;
+    public void setType(HelloType type) {
+        this.type = type;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getSender() {
+        return sender;
+    }
+
+    public void setSender(String sender) {
+        this.sender = sender;
     }
 }
